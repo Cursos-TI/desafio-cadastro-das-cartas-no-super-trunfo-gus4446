@@ -23,6 +23,8 @@ int main() {
   float densidade1, densidade2;
   float PIB_per_capta1, PIB_per_capta2;
 
+  float super_poder1, super_poder2;
+
 
   //cadastro da primeira carta.
 
@@ -85,11 +87,18 @@ int main() {
   
   // Cálculo da densidade populacional e PIB per capta
    densidade1= populacao1 / area_em_km1;
-   densidade1= populacao2 / area_em_km2;
+   densidade2= populacao2 / area_em_km2;
    PIB_per_capta1= PIB1 / populacao1;
    PIB_per_capta2= PIB2 / populacao2;
 
-  
+
+   //"super poder" resultado da soma dos fatores.
+
+   super_poder1 = populacao1 + area_em_km1 + PIB1 + pontos_turisticos1 + PIB_per_capta1 + densidade1;
+
+   super_poder2= populacao2 + area_em_km2 + PIB2 + pontos_turisticos2 + PIB_per_capta2 + densidade2;
+
+   
 
   //exibição de resultados da primeira carta.
 
@@ -104,8 +113,9 @@ int main() {
   printf("PIB: %.2f\n", PIB1);
   printf("densidade1: %.2f\n", densidade1);
   printf("PIB_per_capta1: %.2f\n",PIB_per_capta1 );
+  printf("super poder1: %.2f\n", super_poder1);
 
-
+  
 
 
   //exibição de resultados da segunda carta.
@@ -121,14 +131,20 @@ int main() {
   printf("PIB: %.2f\n", PIB2);
   printf("densidade2: %.2f\n", densidade2);
   printf("PIB_per_capta2: %.2f\n", PIB_per_capta2);
+  printf("Super Poder 2: %.2f\n", super_poder2);
 
+  //super poder comparação
+
+  printf("\n***super poder1 é maior que super poder2**\n");
+  
+  printf("super_poder1 > super_poder2: %d\n", super_poder1 > super_poder2);
+  
 
   
   
-
-  
-  
-
 
     return 0;
 }
+
+
+
