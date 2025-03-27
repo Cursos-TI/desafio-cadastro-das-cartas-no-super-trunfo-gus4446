@@ -139,12 +139,19 @@ int main() {
   
   printf("super_poder1 > super_poder2: %d\n", super_poder1 > super_poder2);
   
-
+  // carta maior ou menor
+if(super_poder1>super_poder2){
+  printf("carta1 venceu!\n");
+}else{
+  printf("carta2 venceu!");
+}
   
   
 
     return 0;
 }
+
+
 
 
 
